@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2016. Jaroslaw Owdienko
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@color/colorPrimary"/>
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/text"/>
+    </item>
+
+</layer-list>

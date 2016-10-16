@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- APP Theme which extends Theme App Compact -->
+    <style name="CustomActionBarTheme" parent="@style/Theme.AppCompat">
+        <item name="android:actionOverflowButtonStyle">@style/OverflowButton</item>
+        <item name="actionOverflowButtonStyle">@style/OverflowButton</item>
+    </style>
+
+    <!-- Set Custom Icon for Overflow Button in ActionBar -->
+    <style name="OverflowButton" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@mipmap/ic_action_overflow</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2016. Jaroslaw Owdienko
+  -->
+
+<menu xmlns:android2="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res-auto">
+    <item
+        android2:id="@+id/menu_settings"
+        android2:orderInCategory="1"
+        android:showAsAction="never"
+        android2:title="@string/action_settings" />
+    <item
+        android2:id="@+id/menu_about"
+        android2:orderInCategory="2"
+        android:showAsAction="never"
+        android2:title="@string/about_author"/>
+
+</menu>
