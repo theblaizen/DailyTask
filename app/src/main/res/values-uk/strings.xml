@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2016. Jaroslaw Owdienko
+  -->
+<resources>
+    <string name="app_name">Daily Task</string>
+    <string name="about_author">Про автора</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="drawer_item_home">Головна</string>
+    <string name="drawer_item_free_play">Безкоштовно</string>
+    <string name="drawer_item_custom">Налаштовуваний</string>
+    <string name="drawer_item_settings">Параметри</string>
+    <string name="drawer_item_help">Допомога</string>
+    <string name="drawer_item_open_source">Open Source</string>
+    <string name="drawer_item_contact">Контакти</string>
+    <string name="drawer_item">item</string>
+</resources>
