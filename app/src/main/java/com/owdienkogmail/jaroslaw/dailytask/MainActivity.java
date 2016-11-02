@@ -7,9 +7,9 @@ package com.owdienkogmail.jaroslaw.dailytask;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AlertDialog;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -23,14 +23,14 @@ import android.widget.Toast;
 
 import com.mikepenz.iconics.typeface.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.Badgeable;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "debugMain";
     private Toolbar toolbarMenu;
@@ -40,20 +40,19 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.v(TAG,"onCreate");
+        Log.v(TAG, "onCreate");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.mipmap.navigation);
         toolbarMenu = toolbar;
 
-        try {
-            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayShowTitleEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
         }
-        catch (NullPointerException e) {
-            Log.e(TAG,"Stopping display text view failed!");
-        }
+        else
+            Log.v(TAG, "ToolBar creation error!");
 
         drawerCall();
 
@@ -84,7 +83,9 @@ public class MainActivity extends ActionBarActivity {
     public boolean onKeyUp(int keycode, KeyEvent e) {
         switch(keycode) {
             case KeyEvent.KEYCODE_MENU:
-                toolbarMenu.showOverflowMenu();
+                if (!drawerResult.isDrawerOpen())
+                    toolbarMenu.showOverflowMenu();
+
                 return true;
         }
 
@@ -108,9 +109,9 @@ public class MainActivity extends ActionBarActivity {
         View view = inflater.inflate(R.layout.about_title, null);
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, android.R.style.Theme_Holo_Light_Dialog_NoActionBar_MinWidth);
         builder.setCustomTitle(view)
-                .setMessage("Hi, my name is Yaroslav and I am the author of this app." +
-                        "\n\nEmail to feedback: jaroslaw.owdienko@gmail.com" +
-                        "\n\nOther social net: \nvk.com/id291857382" +
+                .setMessage("Hi, we are WellDev team and we think, \nYou are enjoyed the application!" +
+                        "\n\nIf You have any propositions/ideas, \nplease write over here: \n\njaroslaw.owdienko@gmail.com" +
+                        "\nvk.com/id291857382" +
                         "\n\n\n\t\t\t\t\t\t\t\t\tVersion 0.0.1.0" +
                         "\n\t\t © 2016 " + getString(R.string.app_name) + " BETA, WellDev")
                 .setCancelable(false)
@@ -133,14 +134,11 @@ public class MainActivity extends ActionBarActivity {
                 .withActionBarDrawerToggle(true)
                 .withHeader(R.layout.drawer_header)
                 .addDrawerItems(
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_home).withIcon(FontAwesome.Icon.faw_book).withBadge("99").withIdentifier(1),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_free_play).withIcon(FontAwesome.Icon.faw_gamepad),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_custom).withIcon(FontAwesome.Icon.faw_eye).withBadge("6").withIdentifier(2),
-                        new SectionDrawerItem().withName(R.string.drawer_item_settings),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_help).withIcon(FontAwesome.Icon.faw_cog),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_open_source).withIcon(FontAwesome.Icon.faw_question).setEnabled(false),
-                        new SectionDrawerItem().withName(R.string.drawer_item_contacts),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_contact).withIcon(FontAwesome.Icon.faw_github).withBadge("12+").withIdentifier(1)
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_notes).withIcon(FontAwesome.Icon.faw_book).withBadge("1").withIdentifier(1),
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_alert).withIcon(FontAwesome.Icon.faw_clock_o).withBadge("3").withIdentifier(2),
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_important).withIcon(FontAwesome.Icon.faw_star).withIdentifier(3),
+                        new DividerDrawerItem(),
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_settings).withIcon(FontAwesome.Icon.faw_cog).withIdentifier(4)
                 )
                 .withOnDrawerListener(new Drawer.OnDrawerListener() {
                     @Override
@@ -160,6 +158,7 @@ public class MainActivity extends ActionBarActivity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
                         if (drawerItem instanceof Nameable) {
                             Toast.makeText(MainActivity.this, MainActivity.this.getString(((Nameable) drawerItem).getNameRes()), Toast.LENGTH_SHORT).show();
+                            toolbarMenu.setTitle(MainActivity.this.getString(((Nameable) drawerItem).getNameRes()));
                         }
                         if (drawerItem instanceof Badgeable) {
                             Badgeable badgeable = (Badgeable) drawerItem;
@@ -168,7 +167,7 @@ public class MainActivity extends ActionBarActivity {
                                 try {
                                     int badge = Integer.valueOf(badgeable.getBadge());
                                     if (badge > 0) {
-                                        drawerResult.updateBadge(String.valueOf(badge - 1), position);
+                                        drawerResult.updateBadge(String.valueOf(""), position);
                                     }
                                 } catch (Exception e) {
                                     Log.v(TAG, "Не нажимайте на бейдж, содержащий плюс! :)");

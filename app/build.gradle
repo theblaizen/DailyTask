@@ -29,4 +29,5 @@ dependencies {
     compile('com.mikepenz.materialdrawer:library:0.9.5@aar') {
         transitive = true
     }
+    compile 'com.android.support:recyclerview-v7:24.1.1'
 }
