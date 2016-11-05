@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="787871951412550519b0222aba3c9df4cea49875">
+        <dex dex="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.1.1_f9db3194194b8bd84134638bfe6842ecd277a6e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
+        <dex dex="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.1.1_99e6ec02867fb9d880ec50ff3db1f341689477bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f62e763609f65e47dc6c498760a4accf02776788">
+        <dex dex="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.1.1_018973b43ed8c7207dddb66f7510e96579e1268e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
+        <dex dex="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.1.1_f29504332771a25f0d5d0d145ae9b5b78d33908a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\exploded-aar\com.mikepenz.iconics\library\0.7.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6d88ec155032460a5f4efa723a04c460d3391193">
+        <dex dex="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\pre-dexed\debug\com.mikepenz.iconics-library-0.7.3_fb9314ed26106a29e49961470d282cb732db2123.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c0f0e2458f0335f53aef8d6be0f3d307f72ae9bf">
+        <dex dex="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\pre-dexed\debug\instant-run_c6fdb9266749b8970bb6499a922f78f51a0793e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.1.1_0d64febe1a2068360996a9e2d9a61a5b92990c9c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Blaizen\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.1.1\support-annotations-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\pre-dexed\debug\support-annotations-24.1.1_566f5be5c54095728642219d7fd5e0880cab2e88.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\exploded-aar\com.mikepenz.materialdrawer\library\0.9.5\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="196889103665d7eae17105a5a78f141086044301">
+        <dex dex="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\pre-dexed\debug\com.mikepenz.materialdrawer-library-0.9.5_7c270383c88ebbf0a5a973bd385ac1a02e2ff1e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\pre-dexed\debug\internal_impl-24.1.1_2d3031a4c5e47f81668551aaac53026cda888ee3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="029494d2b6a70b79b699aa85089c58135980575c">
+        <dex dex="C:\Users\Blaizen\AndroidStudioProjects\DailyTask\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_ef9b29fd4083d9d79bcbafa40b6a5714225a3746.jar" />
+    </item>
+
+</items>
